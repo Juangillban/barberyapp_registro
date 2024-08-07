@@ -20,12 +20,22 @@
             padding: 1rem;
             text-align: center;
             position: relative;
+            transition: background 0.5s;
+        }
+        header:hover {
+            background: linear-gradient(to right, red, white, blue);
         }
         header img {
             position: absolute;
             left: 20px;
-            height: 100px; 
-            width: auto; 
+            height: 100px;
+            width: auto;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        header img:hover {
+            transform: scale(1.1);
         }
         .container {
             max-width: 400px;
@@ -33,12 +43,21 @@
             padding: 20px;
             background-color: #ffffff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
         h2 {
             color: #333;
+            text-align: center;
+            margin-bottom: 20px;
         }
         .form-group {
             margin-bottom: 15px;
+            position: relative;
         }
         .form-group label {
             display: block;
@@ -49,6 +68,13 @@
             width: 100%;
             padding: 10px;
             box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus, .form-group select:focus {
+            border-color: blue;
+            outline: none;
         }
         .form-group button {
             width: 100%;
@@ -56,10 +82,13 @@
             background-color: blue;
             color: white;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
         }
         .form-group button:hover {
             background-color: darkblue;
+            transform: translateY(-2px);
         }
         .form-links {
             margin-top: 10px;
@@ -68,15 +97,35 @@
         .form-links a {
             color: blue;
             text-decoration: none;
+            transition: color 0.3s;
         }
         .form-links a:hover {
+            color: darkblue;
             text-decoration: underline;
+        }
+
+        /* Media Queries */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            header img {
+                position: relative;
+                margin-bottom: 10px;
+                left: auto;
+                right: 20px;
+            }
+            .container {
+                margin: 20px;
+                padding: 15px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="C:\Users\juang\OneDrive\Desktop\Barberya app\Logo 2.png" alt="Logo">
+        <img src="https://github.com/Juangillban/Barberyapp/raw/main/logo%202.jpg" alt="Logo de Barber Ya App">
         <h1>Barber Ya App</h1>
     </header>
     <div class="container">
