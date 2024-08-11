@@ -69,13 +69,13 @@
             color: #333;
         }
         .form-group input, .form-group select {
-            width: 100%;
-            padding: 15px; /* Aumentado el padding */
-            height: 50px; /* Aumentado el height */
+            width: calc(100% + 75.6px); /* Incrementar el ancho en 75.6px (1 cm a cada lado) */
+            padding: 10px;
             box-sizing: border-box;
             border: 1px solid #ccc;
             border-radius: 5px;
             transition: border-color 0.3s;
+            margin-left: -37.8px; /* Ajustar el desplazamiento para centrar el input */
         }
         .form-group input:focus, .form-group select:focus {
             border-color: blue;
@@ -83,7 +83,7 @@
         }
         .form-group button {
             width: 100%;
-            padding: 15px; /* Aumentado el padding */
+            padding: 10px;
             background-color: blue;
             color: white;
             border: none;
@@ -134,6 +134,10 @@
                 margin: 20px;
                 padding: 15px;
                 max-width: 100%; /* Ajuste en dispositivos móviles para ocupar todo el ancho disponible */
+            }
+            .form-group input, .form-group select {
+                width: 100%;
+                margin-left: 0; /* Eliminar el ajuste de margen en dispositivos móviles */
             }
         }
     </style>
