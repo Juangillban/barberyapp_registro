@@ -10,6 +10,9 @@
             background-color: #f0f0f0;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         header {
             display: flex;
@@ -38,9 +41,9 @@
             transform: scale(1.1);
         }
         .container {
-            max-width: 400px;
+            max-width: 800px; /* Aumentado el max-width para hacer el contenedor más ancho */
             margin: 50px auto;
-            padding: 20px;
+            padding: 100px;
             background-color: #ffffff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
@@ -103,7 +106,16 @@
             color: darkblue;
             text-decoration: underline;
         }
-
+        .footer-container {
+            text-align: center;
+            padding: 1rem;
+            background-color: #f0f0f0;
+            color: #333;
+            width: 100%;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+            position: static;
+            margin-top: auto;
+        }
         /* Media Queries */
         @media (max-width: 600px) {
             header {
@@ -119,6 +131,7 @@
             .container {
                 margin: 20px;
                 padding: 15px;
+                max-width: 100%; /* Ajuste en dispositivos móviles para ocupar todo el ancho disponible */
             }
         }
     </style>
@@ -183,6 +196,11 @@
                 <p>¿Eres barbero? <a href="pagina_para_barberos.html">Haz clic aquí</a></p>
             </div>
         </form>
+    </div>
+    <div class="footer-container">
+        <footer>
+            &copy; 2024 Barber Ya App. Todos los derechos reservados.
+        </footer>
     </div>
 </body>
 </html>
