@@ -42,7 +42,7 @@
             transform: scale(1.1);
         }
         .container {
-            max-width: 800px; /* Aumentado el max-width para hacer el contenedor más ancho */
+            max-width: 800px; 
             margin: 50px auto;
             padding: 100px;
             background-color: #ffffff;
@@ -68,14 +68,17 @@
             margin-bottom: 5px;
             color: #333;
         }
-        .form-group input, .form-group select {
+         .form-group input, .form-group select {
             width: calc(100% + 75.6px); /* Incrementar el ancho en 75.6px (1 cm a cada lado) */
-            padding: 10px;
+            padding-left: 0; /* Asegura que el texto comience en el borde izquierdo del input */
+            padding-right: 10px; /* Conserva el padding a la derecha */
+            padding-top: 10px; /* Padding superior */
+            padding-bottom: 10px; /* Padding inferior */
             box-sizing: border-box;
             border: 1px solid #ccc;
             border-radius: 5px;
             transition: border-color 0.3s;
-            margin-left: -37.8px; /* Ajustar el desplazamiento para centrar el input */
+            margin-left: -37.8px;
         }
         .form-group input:focus, .form-group select:focus {
             border-color: blue;
