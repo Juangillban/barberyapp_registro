@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://raw.githubusercontent.com/Juangillban/Barberyapp/main/icono%20barber%20ya%20.ico" type="image/x-icon">
+    <title>Registro - Barber Ya App</title>
+    <style>
+        body {
+            font-family: Arial, Impact, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to right, blue, white, red);
+            color: black;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+            transition: background 0.5s;
+        }
+        header:hover {
+            background: linear-gradient(to right, red, white, blue);
+        }
+        header img {
+            position: absolute;
+            left: 20px;
+            height: 100px;
+            width: auto;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        header img:hover {
+            transform: scale(1.1);
+        }
+        .container {
+            max-width: 800px; 
+            margin: 50px auto;
+            padding: 50px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            position: relative;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus, .form-group select:focus {
+            border-color: blue;
+            outline: none;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .form-group button:hover {
+            background-color: darkblue;
+            transform: translateY(-2px);
+        }
+        .form-links {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .form-links a {
+            color: blue;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .form-links a:hover {
+            color: darkblue;
+            text-decoration: underline;
+        }
+        .footer-container {
+            text-align: center;
+            padding: 1rem;
+            background-color: #f0f0f0;
+            color: #333;
+            width: 100%;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+            position: static;
+            margin-top: auto;
+        }
+        h3.ok {
+            color: green;
+            text-align: center;
+            font-size: 1.2em;
+            background-color: #d4edda; /* Fondo verde claro */
+            border: 1px solid green;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h3.bad {
+            color: red;
+            text-align: center;
+            font-size: 1.2em;
+            background-color: #f8d7da; /* Fondo rojo claro */
+            border: 1px solid red;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Media Queries */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            header img {
+                position: relative;
+                margin-bottom: 10px;
+                left: auto;
+                right: auto;
+            }
+            .container {
+                margin: 20px;
+                padding: 15px;
+                max-width: 100%; /* Ajuste en dispositivos móviles para ocupar todo el ancho disponible */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://github.com/Juangillban/Barberyapp/raw/main/logo%202.jpg" alt="Logo de Barber Ya App">
+        <h1>Barber Ya App</h1>
+    </header>
+    <div class="container">
+        <h2>Registro</h2>
+        <form method="post">
+            <div class="form-group">
+                <label for="firstname">Nombres y Apellidos</label>
+                <input type="text" id="firstname" name="firstname" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Edad</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Teléfono celular</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="country">País</label>
+                <select id="country" name="country">
+                    <option value="Colombia">Colombia</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="state">Departamento</label>
+                <input type="text" id="state" name="state">
+            </div>
+            <div class="form-group">
+                <label for="city">Ciudad</label>
+                <input type="text" id="city" name="city">
+            </div>
+            <div class="form-group">
+                <button type="submit">Registrarse</button>
+            </div>
+            <div class="form-links">
+                <p>¿Eres barbero? <a href="pagina_para_barberos.html">Haz clic aquí</a></p>
+            </div>
+        </form>
+
+        <?php
+        include("registro.php");
+        ?>
+    </div>
+    <div class="footer-container">
+        <footer>
+            &copy; 2024 Barber Ya App. Todos los derechos reservados.
+        </footer>
+    </div>
+</body>
+</html>
